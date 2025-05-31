@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin | Journal Entry</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Admin Panel</h1>
+    <p>Add journal entries and projects</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="journal.html">Journal</a>
+    <a href="admin.html">Admin</a>
+  </nav>
+
+  <section>
+    <form id="journalForm">
+      <label for="title">Title:</label><br />
+      <input type="text" id="title" required><br><br>
+
+      <label for="date">Date:</label><br />
+      <input type="date" id="date" required><br><br>
+
+      <label for="content">Entry:</label><br />
+      <textarea id="content" rows="10" cols="50" required></textarea><br><br>
+
+      <button type="submit">Save Entry</button>
+    </form>
+
+    <hr><br>
+
+    <h2>Add a Project</h2>
+    <form id="projectForm">
+      <input type="text" id="projTitle" placeholder="Project Title" required><br><br>
+      <textarea id="projDesc" placeholder="Project Description" required></textarea><br><br>
+      <input type="url" id="projLink" placeholder="GitHub Link" required><br><br>
+      <button type="submit">Add Project</button>
+    </form>
+
+    <br>
+    <button onclick="clearAll()">Clear All Data</button>
+  </section>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
